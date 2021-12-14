@@ -39,7 +39,7 @@
 }
 
 .ex-5-square:active {
-    transform: scale(.5,.5);
+    transform: scale(0.5,0.5);
 }
 
 .ex-6-img {
@@ -95,4 +95,101 @@
     60% {transform:rotate(180deg)}
     90% {transform:rotate(270deg)}
     100% {transform:rotate(0deg)}
+}
+
+/* esercizio 12 */
+
+.ex-12-button:hover .ex-12-top-white {
+    animation: moveRight 2s linear;
+}
+
+@keyframes moveRight {
+    0% { left:10%;}
+    50%{left:70%;}
+    100%{left:10%}
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: moveLeft 2s linear;
+}
+
+@keyframes moveLeft {
+    0% { right:20%;}
+    50%{right:70%;}
+    100%{right:20%}
+}
+
+
+/* esercizio 13 */
+
+.ex-13-button:hover .ex-13-top-white {
+    animation:moveTopAround 2s linear;
+}
+
+@keyframes moveTopAround {
+    0% {
+        top:-10px;
+        left:10%;
+    }
+
+    20% {
+        top:-10px;
+        left:calc(100% - 30px);
+    }
+
+    35%{
+        top:calc(100% - 10px);
+        left:calc(100% - 30px);
+    }
+
+    65% {
+        top:calc(100% - 10px);
+        left:-30px;
+    }
+
+    85% {
+        top:-10px;
+        left:-30px;
+    }
+
+    100% {
+        top:-10px;
+        left:10%;
+    }
+}
+
+.ex-13-button:hover .ex-13-bottom-white {
+    animation:moveBottomAround 2s linear;
+}
+
+@keyframes moveBottomAround {
+    0% {
+        bottom:-10px;
+        right:20%;
+    }
+
+    20% {
+        bottom:-10px;
+        right:calc(100% - 30px);
+    }
+
+    30% {
+        bottom: 90%;
+        right:calc(100% - 30px);
+    }
+
+    60% {
+        bottom:90%;
+        right:-30px;
+    }
+
+    85% {
+        bottom:-10px;
+        right:-30px;
+    }
+
+    100% {
+        bottom:-10px;
+        right:20%;
+    }
 }
